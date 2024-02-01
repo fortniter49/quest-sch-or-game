@@ -1,47 +1,68 @@
 a = input()
 print(' 1 - калькулятор')
-print(' 2 - подушка')
+print(' 2 - суперподушка')
 print(' 3 - набор химика')
 print(' 4 - переводчик')
 print(' 5 - кофе')
 y1 = input()
 y2 = input()
-if a == '1': 
+if a == '1':
+    print(' ПК или учеба')
+    print(' 1 - ПК')
+    print(' 2 - учеба')
     a1 = input()
-    if a1 == '1':  #PC
+    if a1 == '1':
+        print(' Выберите что вы будете делать?')
+        print(' 1 - играть')
+        print(' 2 - смотреть фильм')
         a2 = input()
-        if a2 == '1':  #GAME
+        if a2 == '1':
+            print(' 1 - VR')
+            print(' PC GAME')
             a3 = input()
-            if a3 == '1':  #VR
+            if a3 == '1':
                 x222 = 0
                 x111 = 0
+                print(' Вам нужно писать 1 или 2 в зависимости от того что вы хотите выбрать')
                 for i in range(5):
                     i1 = i % 2
                     if i == 0 or i1 == 0:
-                        print('front / back')
+                        print('*** front / back*** ')
                         x = input()
                         if x == '1':
                             x222 += 1
                     else:
-                        print('right / left')
+                        print('*** right / left ***')
                         x = input()
                         if x == '2':
                             x111 += 1
                 if x222 == 3:
                     if x111 == 2:
                         if y1 != '2' and y2 != '2':
-                            print('end')  #END
+                            print('!!!!! Вы вышли из сооружения и заснули, но')
+                            print('!!!!! после вы проснулись в лучшем мире')
+                            print('END END END END END END')
                         else:
-                            print('end')  #END
+                            print('!!!!! Вы вышли из сооружения и заснули, но')
+                            print('!!!!! вы упали на суперподушку которая дала вам знаний,')
+                            print('!!!!! с помощью нее вы все сдали на 5')
+                            print('END END END END END END')
                 if x222 == 0 and x111 == 0 or x111 == 1:
                     print ('вам доступен супер учебник по геометрии')
                     geom = 1
                 if x222 == 0 and x111 == 2:
                     print('вам доступен супер учебник по русскому')
                     russ = 1
+                print('Что будете делать дальше')
+                print(' 1 - пойду спать')
+                print(' 2 - пойду учить уроки')
                 a4 = input()
                 if a4 == '1':
-                    print('end')  #END
+                    print('!!!!! Вы пошли поспать, но когда проснулись')
+                    print('!!!!! подумали что вы в VR и долго пытались')
+                    print('!!!!! понять на какую кнопку встать с кровати')
+                    print('!!!!! в итоге вы опздали на экзамены')
+                    print('END END END END END END')
                 elif a4 == '2':
                     o0 = 1
             elif a3 == '2':  #PCGAME
@@ -76,7 +97,15 @@ if a == '1':
                         print(end)  #END
                     else:
                         o0 == 1
-            elif a3 == '2':  #series
-                ...
-    elif a2 == '2':  #SCH
-        print('s')
+            elif a3 == '2':
+                print('')#series
+    if a1 == '2' or o0 == 1:
+        a2 = input()
+        print(' 1 - Математика')
+        print(' 2 - Языки')
+        print(' 3 - Остальное')
+        if a2 == '1':
+            a3 = input()
+            print(' 1 - Геометрия')
+            print(' 2 - Алгебра')
+            print(' 3 - Информатика')
