@@ -162,7 +162,7 @@ if a == '1':
                     print(' Ну это просто...')
                     input()
     if a1 == '2' or o0 == 1:
-        while health != -1:
+        while health != 0:
             a2 = input()
             print(' 1 - Математика')
             print(' 2 - Языки')
@@ -191,3 +191,10 @@ if a == '1':
                             finish.add('Геометрию')
                             finish.add('Русский ')
                             print('Вы выучили геометрию и русский')
+                            health -= 1
+                elif a3 == '2':
+                    if y1 == '1' or y2 == '1':
+                        print('  Вы просто так потратили энергию')
+                        health -= 1
+                    else:
+                        print(' √1936 = ...')
