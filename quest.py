@@ -32,7 +32,7 @@ if a == '1':
     if y1 == '5' or y2 == '5':
         health += 1
     if y1 == '4' or y2 == '4':
-        finish.add('Английский ')
+        finish.add('Английский')
         eng = 1
     if y1 == '2' or y2 == '2':
         pod = 1
@@ -108,7 +108,7 @@ if a == '1':
                     print(' Вы поиграли 2 часа')
                     if a4 == '1' and y1 != 4 and y2 != 4:
                         print(' Вы получили навык английского языка')
-                        finish.add('Английский ')
+                        finish.add('Английский')
                         eng = 1
                     print(' 1 - пойти спать')
                     print(' 2 - пойти играть дальше')
@@ -137,7 +137,7 @@ if a == '1':
                 a4 = input()
                 if a4 == '1':
                     print(' Вам доступен новый код')
-                    finish.add('Информаттику ')
+                    finish.add('Информатику')
                     kod = 1
                 elif a4 == '2':
                     print(' Тебе выдан штраф')
@@ -192,7 +192,7 @@ if a == '1':
                 if a3 == '1':
                     if geom == '1':
                         print('Вы выучили геометрию')
-                        finish.add('Геометрию ')
+                        finish.add('Геометрию')
                     else:
                         print(' Катит это ...')
                         print('1 - Сторона прилегающая к прямому углу')
@@ -200,7 +200,7 @@ if a == '1':
                         print('3 - Катет - сторона прилегающая к прямому углу')
                         a4 = input()
                         if a4 == '1':
-                            finish.add('Геометрию ')
+                            finish.add('Геометрию')
                             print(' Вы выучили геометрию')
                             health -= 1
                         elif a4 == '2':
@@ -210,7 +210,7 @@ if a == '1':
                             input()
                         elif a4 == '3':
                             finish.add('Геометрию')
-                            finish.add('Русский ')
+                            finish.add('Русский')
                             print('Вы выучили геометрию и русский')
                             asd = 1
                             health -= 1
@@ -229,7 +229,7 @@ if a == '1':
                             health -= 1
                         elif a4 == '2':
                             print('Вы выучили алгебру')
-                            finish.add('Алгебру ')
+                            finish.add('Алгебру')
                             health -= 1
                         elif a4 == '3':
                             print('Вы не выучили алгебру')
@@ -245,7 +245,7 @@ if a == '1':
                         a4 = input()
                         if a4 == '1':
                             print('Вы выучили информатику')
-                            finish.add('Информатику ')
+                            finish.add('Информатику')
                         elif a4 == '2':
                             print('Вы не выучили информатику')
                         elif a4 == '3':
@@ -258,7 +258,7 @@ if a == '1':
                 if a3 == '1':
                     if russ == 1:
                         print('Вы выучили Русский')
-                        finish.add('Русский ')
+                        finish.add('Русский')
                     elif asd == 1:
                         print('Вы уже выучили Русский')
                         health -= 1
@@ -270,7 +270,7 @@ if a == '1':
                         a4 = input()
                         if a4 == '1':
                             print('Вы выучили Русский')
-                            finish.add('Русский ')
+                            finish.add('Русский')
                             health -= 1
                         elif a4 == '2':
                             print('Вы выучили жизнь')
@@ -293,7 +293,7 @@ if a == '1':
                         a4 = input()
                         if a4 == '1':
                             print('Молодец емае')
-                            finish.add('Английский ')
+                            finish.add('Английский')
                             health -= 1
                         elif a4 == '2':
                             print('ААААААА Француз! Француз!')
@@ -312,3 +312,48 @@ if a == '1':
                         end = 1
                         health = 0
                         input()
+                    elif chem == 1:
+                        print('Вы выучили химию')
+                        finish.add('Химию')
+                        health -= 1
+                    else:
+                        print('ХИМИЯ?????')
+                        print('фатальная ошибочка')
+                        health = 0
+                elif a3 == '2':
+                    if phis == 1:
+                        print('Вы выучили физику')
+                        finish.add('Физику')
+                    else:
+                        print('Плотность выше у ...')
+                        print('1 - воды')
+                        print('2 - льда')
+                        a4 = input()
+                        if a4 == '1':
+                            print('Вы выучили физику')
+                            finish.add('Физику')
+                            health -= 1
+                        elif a4 == '2':
+                            print('Вы не выучили физику')
+                            health -= 1
+                elif a3 == '3':
+                    print('Ветры от тропиков к экватору')
+                    print('1 - Планетарные ветры')
+                    print('2 - Муссоны')
+                    print('3 - США')
+                    a4 = input()
+                    if a4 == '1':
+                        print('Вы не выучили географию')
+                        health -= 1
+                    elif a4 == '2':
+                        print('Вы выучили географию')
+                        finish.add('Географию')
+                        health -= 1
+                    elif a4 == '3':
+                        print('Почти')
+                        health -= 1
+            print('Остаток энергии -', health)
+if end != 1:
+    print('Вы выучили:')
+    print(', '.join(finish))
+input()
